@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>PHP Serialized Data Viewer</title>
+
+	<link rel="stylesheet" href="/css/viewer.css">
+
+</head>
+
+<body>
+
+	<h1><a href="https://github.com/LachlanArthur/php-serialized-data-viewer">LachlanArthur/php-serialized-data-viewer</a></h1>
+
+	<p><textarea id="input">O:8:&quot;stdClass&quot;:2:{s:3:&quot;foo&quot;;s:3:&quot;bar&quot;;s:16:&quot;&#xfffd;stdClass&#xfffd;secret&quot;;s:3:&quot;shh&quot;;}</textarea></p>
+
+	<p>
+		<button name="view">📂 View Structure</button>
+		<button name="json">🔍 View JSON</button>
+		<button name="copy">📝 Copy JSON</button>
+	</p>
+
+	<div id="output"></div>
+
+	<script src="/viewer.js" type="module"></script>
+
+</body>
+
+</html>

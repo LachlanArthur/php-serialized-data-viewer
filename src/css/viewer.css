@@ -1,0 +1,139 @@
+@import './variables.css';
+@import './variables-dark.css' ( prefers-color-scheme: dark );
+
+@import './reset.css';
+
+@import './prism.css';
+@import './prism-dracula.css';
+
+body {
+	margin: 0.5rem;
+	color: var( --text-color );
+	background-color: var( --background-color );
+}
+
+a, a:hover {
+	color: var( --link-color );
+}
+
+:matches( ul, ol, dl ) {
+	margin: 0 0 1rem;
+
+	:matches( ul, ol, dl ) {
+		margin-bottom: 0;
+	}
+}
+
+#input {
+	width: 100%;
+	min-height: 200px;
+	color: var( --text-color );
+	background-color: var( --background-color );
+}
+
+#output {
+	display: block;
+	white-space: pre-wrap;
+}
+
+.value-type {
+
+	&.type-null      { --type: 'null'; }
+	&.type-object    { --type: 'object'; }
+	&.type-reference { --type: 'reference'; }
+	&.type-string    { --type: 'string'; }
+	&.type-array     { --type: 'array'; }
+	&.type-boolean   { --type: 'boolean'; }
+	&.type-float     { --type: 'float'; }
+	&.type-integer   { --type: 'integer'; }
+
+	&:not( .type-object ):not( .type-array ) {
+		display: inline-block;
+
+		&::before {
+			content: var( --type );
+		}
+	}
+
+	&.type-object,
+	&.type-array {
+		display: contents;
+
+		&:not( [open] ) > :not( summary ) {
+			display: none;
+		}
+
+		&:not( [open] ) > summary {
+			&::after {
+				content: '▶';
+			}
+		}
+
+		&[open] > summary {
+			&::after {
+				content: '🔽';
+			}
+		}
+
+		> summary {
+			display: inline-block;
+
+			&::before {
+				content: var( --type ) '( ' var( --count ) ' )';
+			}
+
+			display: inline;
+		}
+
+		> .value {
+			display: block;
+			margin-left: 2rem;
+		}
+
+		dl {
+
+		}
+
+		dt, dd {
+			display: inline;
+			margin: 0;
+		}
+
+		dt .value-type {
+			&::before {
+				content: unset;
+			}
+			&::after {
+				content: ':';
+			}
+
+			&.access-private::before {
+				content: 'private ';
+			}
+
+			&.access-protected::before {
+				content: 'protected ';
+			}
+		}
+
+		dt {
+			margin-right: 1ex;
+		}
+	}
+
+	> .value {
+		display: inline-block;
+	}
+
+	:not( dt ) > &:not( .type-object ):not( .type-array ) {
+		.value {
+			&::before { content: '( ' }
+			&::after { content: ' )' }
+		}
+
+		&.type-string .value {
+			&::before { content: '( "' }
+			&::after { content: '" )' }
+		}
+	}
+}

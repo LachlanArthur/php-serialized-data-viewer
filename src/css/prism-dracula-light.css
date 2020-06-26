@@ -1,0 +1,13 @@
+:root {
+	--dracula-background:  #f8f8f2;
+	--dracula-foreground:  #282a36;
+	--dracula-selection:   #cbcee5;
+	--dracula-comment:     #8393c7;
+	--dracula-red:         #de353d;
+	--dracula-orange:      #a56a20;
+	--dracula-yellow:      #707e0f;
+	--dracula-green:       #008a0d;
+	--dracula-purple:      #8963c4;
+	--dracula-cyan:        #048395;
+	--dracula-pink:        #c74493;
+}

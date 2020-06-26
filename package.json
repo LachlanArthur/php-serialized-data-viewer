@@ -1,0 +1,21 @@
+{
+	"name": "php-serialized-data-viewer",
+	"version": "0.1.0",
+	"license": "MIT",
+	"scripts": {
+		"start": "snowpack dev",
+		"build": "snowpack build"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.8.4",
+		"perfectionist": "^2.4.0",
+		"postcss-cli": "^7.1.1",
+		"postcss-nested": "^4.2.1",
+		"snowpack": "^2.5.4"
+	},
+	"dependencies": {
+		"ll": "^1.2.0",
+		"php-serialized-data": "^0.6.1",
+		"prismjs": "^1.20.0"
+	}
+}

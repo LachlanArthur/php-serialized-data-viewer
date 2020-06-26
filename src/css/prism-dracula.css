@@ -1,0 +1,52 @@
+@import './prism-dracula-light.css' ( prefers-color-scheme: light ), ( prefers-color-scheme: no-preference );
+@import './prism-dracula-dark.css' ( prefers-color-scheme: dark );
+
+:root {
+	--prism-foreground:  var( --dracula-foreground );
+	--prism-background:  var( --dracula-background );
+
+	--prism-token:       var( --dracula-pink );
+
+	--prism-atrule:      var( --dracula-green );
+	--prism-attr-name:   var( --dracula-green );
+	--prism-attr-value:  var( --dracula-green );
+	--prism-boolean:     var( --dracula-purple );
+	--prism-builtin:     var( --dracula-cyan );
+	--prism-cdata:       var( --dracula-comment );
+	--prism-char:        var( --dracula-pink );
+	--prism-class-name:  var( --dracula-cyan );
+	--prism-comment:     var( --dracula-comment );
+	--prism-constant:    var( --dracula-purple );
+	--prism-deleted:     var( --dracula-red );
+	--prism-doctype:     var( --dracula-comment );
+	--prism-entity:      var( --dracula-pink );
+	--prism-function:    var( --dracula-green );
+	--prism-important:   var( --dracula-pink );
+	--prism-keyword:     var( --dracula-pink );
+	--prism-namespace:   var( --dracula-red );
+	--prism-number:      var( --dracula-purple );
+	--prism-operator:    var( --dracula-cyan );
+	--prism-prolog:      var( --dracula-foreground );
+	--prism-property:    var( --dracula-orange );
+	--prism-punctuation: var( --dracula-pink );
+	--prism-regex:       var( --dracula-red );
+	--prism-script:      var( --dracula-foreground );
+	--prism-selector:    var( --dracula-pink );
+	--prism-string:      var( --dracula-yellow );
+	--prism-symbol:      var( --dracula-orange );
+	--prism-tag:         var( --dracula-pink );
+	--prism-url:         var( --dracula-cyan );
+	--prism-variable:    var( --dracula-comment );
+}
+
+.token.important { font-weight: bold; }
+
+/* Language Overrides */
+.language-html       .token.attr-value  { color: var( --dracula-yellow ); }
+.language-markup     .token.attr-value  { color: var( --dracula-yellow ); }
+.language-javascript .token.constant    { color: var( --dracula-orange ); font-style: italic; }
+.language-css        .token.entity      { color: var( --dracula-green ); }
+.language-html       .token.entity      { color: var( --dracula-pink ); }
+.language-html       .token.punctuation { color: var( --dracula-foreground ); }
+.language-markup     .token.punctuation { color: var( --dracula-foreground ); }
+.language-css        .token.selector    { color: var( --dracula-pink ); }

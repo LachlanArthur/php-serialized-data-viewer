@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"mount:src": "mount src --to /",
+		"build:css": "postcss"
+	},
+	"plugins": []
+}
